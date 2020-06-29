@@ -25,7 +25,7 @@ export default class ExerciseList extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/exercises/')
+        axios.get('https://arcane-stream-50261.herokuapp.com/exercises/')
             .then( res => {
                 this.setState({
                     exercises:res.data
@@ -36,7 +36,7 @@ export default class ExerciseList extends Component {
     }
 
     deleteExercise(id){
-        axios.delete('http://localhost:5000/exercises/'+id)
+        axios.delete('https://arcane-stream-50261.herokuapp.com/exercises/'+id)
             .then(res => console.log(res.data))
             this.setState({
                 exercises:this.state.exercises.filter(el => el._id !== id)

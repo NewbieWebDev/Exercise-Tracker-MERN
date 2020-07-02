@@ -64,7 +64,7 @@ export default class CreateExercise extends Component {
             duration:this.state.duration,
             date:this.state.date,
         }
-        console.log(exercise)
+        console.log(exercisez)
 
         axios.post('https://arcane-stream-50261.herokuapp.com/exercises/add',exercise)
         .then(res => console.log(res.data))

@@ -86,7 +86,13 @@ export default class EditExercise extends Component {
         axios.post('https://arcane-stream-50261.herokuapp.com/exercises/update' +this.props.match.params.id ,exercise)
         .then(res => console.log(res.data))
 
-        window.location = '/'
+        this.setState({
+            username: "",
+            description:"",
+            duration:0,
+            date:new Date(),
+            
+        })
     }
 
     render() {
